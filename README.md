@@ -1,73 +1,47 @@
-# React + TypeScript + Vite
+# 🚀 My To-Do App  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and beautiful **To-Do Application** built with React + TypeScript ✨  
+This project helps you manage tasks, track progress, and stay productive with powerful features like drag & drop, deadline highlighting, and animations.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- ✍️ **Add Tasks** with title, description, and due date  
+- 📝 **Edit Tasks** (title, description, due date)  
+- ❌ **Delete Tasks**  
+- 📦 **Drag & Drop** smooth columns (To Do, In Progress, Done)  
+- 🌗 **Dark / Light Mode** toggle (Context API)  
+- 🔍 **Search/Filter Tasks** by title or description  
+- 📊 **Progress Bar** showing completed percentage  
+- 🔔 **Highlight overdue tasks** (today or past deadlines)  
+- 🎨 **Modern UI with TailwindCSS**  
+- ⚡ **Professional animations** with Framer Motion (column fade-in, hover scaling, error shake on empty title)  
+- 💾 **LocalStorage persistence** (data survives refresh)  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/)  
+- [TailwindCSS](https://tailwindcss.com/) – modern styling  
+- [Framer Motion](https://www.framer.com/motion/) – animations  
+- [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) – form handling & schema validation  
+- Context API – global state management (Theme + Tasks)  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Installation & Setup
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/todo-app.git
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Navigate into project folder
+cd todo-app
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# Install dependencies
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Start development server
+npm run dev
